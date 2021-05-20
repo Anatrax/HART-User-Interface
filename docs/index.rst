@@ -6,8 +6,8 @@ Welcome to OSU HART User Interface's documentation!
 
    introduction
    overview
+   parts_list
    getting_started
-   installing
    download
    contributing
    roadmap

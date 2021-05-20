@@ -15,11 +15,11 @@
   </a>
 
   <!-- PROJECT TITLE -->
-  <h1 align="center">OSU HART User Interface</h1>
+  <h1 align="center">OSU HART Launch Controller</h1>
 
   <p align="center">
     <!-- SHORT PROJECT DESCRIPTION -->
-    User interface for the OSU HART Control Box
+    User interface for the OSU HART Launch System
     <br />
     <!-- LINK TO DOCUMENTATION -->
     <a href="https://hart-avionics.github.io/osu-hart-user-interface/"><strong>Explore the docs »</strong></a>
@@ -41,9 +41,9 @@ Table of Contents
 - [About the Project](#about-the-project)
   - [Built with](#about-the-project-built-with)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#getting-started-prerequisites)
-  - [Installing](#getting-started-installing)
-- [Usage](#usage)
+  - [Parts List](#getting-started-parts-list)
+  - [Assembling the Controller](#getting-started-assembling)
+- [Using the Controller](#usage)
 - [Roadmap](#roadmap)
 <!--
 - [FAQ](#faq)
@@ -60,69 +60,61 @@ Table of Contents
 About the Project
 ---------------------
 <!-- Description of the project and it's intended purpose or origin story. -->
-This is the user interface for the Control Box, which includes both the Control side of the Launch System as well as the main computerfor processing the telemetry and displaying the information onto the display. The interface is comprised mostly of buttons, ld switches used for launching the rocket, and a display for displaying the telemetry data.
-
-This project is currently under construction.
+The launch controller is the user interface of the Launch System. It is used to send the launch signal to the launch ignition box, thereby triggering the rocket booster ignition from a safe distance.
 
 <a name="about-the-project-built-with"></a>
 ### Built with
-<!-- This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the Acknowledgements section. Here are a few examples. -->
-
+<!-- This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the Acknowledgements section. Here are a few examples.
 - [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html) documentation generator
 - [TexLive](https://www.tug.org/texlive/)
+-->
+- Teensy
+- XBee
 
 <a name="getting-started"></a>
 Getting Started
 ---------------------
 <!-- This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps. -->
 
-<a name="getting-started-prerequisites"></a>
-### Prerequisites
+<a name="getting-started-parts-list"></a>
+### Parts List
+- Electrical wire
+- Compact 12v battery
+- Teensy 4.0
+- Buck boost converter
+- Key-operated switch
+- Dual-position selector switch
+- Big red button
+- Green indicator LED
+- Yellow indicator LED
+- Red indicator LED
+- Xbee Pro S3B
+- 3D-printed enclosure
+  - Enclosure
+  - Lid
+  - Corners (x4)
+  - Screws (x4)
 
-- [pip](https://pip.pypa.io/en/stable/installing/)
-  ```bash
-  $ sudo apt-get install python3-pip
-  ```
-- [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html) documentation generator
-  ```bash
-  $ pip3 install -U sphinx
-  ```
-  > Make sure `~/.local/bin` is added to PATH
-- [GNU make](https://www.gnu.org/software/make/manual/make.html)
-  ```bash
-  $ sudo apt-get install build-essential
-  ```
-- [recommonmark](https://github.com/readthedocs/recommonmark)
-  ```bash
-  $ pip3 install recommonmark
-  ```
-
-If you plan on building LaTeX PDF documentation, you'll also need the following packages:
-```bash
-$ sudo apt-get install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk
-```
-
-<a name="getting-started-installing"></a>
-### Installing
-1. Clone the repo
-    ```bash
-    $ git clone https://github.com/HART-Avionics/osu-hart-user-interface.git
-    ```
+<a name="getting-started-assembling"></a>
+### Assembling the Controller
+1. Print the enclosure
+2. Glue the corners onto the enclosure
+    ![Enclosure corner placement][corner-placement]
+2. Wire electronic components together according to the wiring diagram
+    ![Wiring diagram][wiring-diagram]
+3. Put the electronics in the enclosure
+4. Screw the lid onto the enclosure
 
 <a name="usage"></a>
-Usage
---------
-<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.<br> -->
-The manual documentation is written mostly in Markdown, but Sphinx also has it's own default markup format called reStructuredText which can be used for generating documentation from code. Once you're finished making changes, you can build the documentation.
-
-```bash
-$ cd docs
-$ make build
-```
-
-Sphinx will generate both HTML & LaTeX PDF documentation in the `docs/build/` directory.
-
-*For more examples, please refer to the official [Sphinx documentation][sphinx-docs]*
+Using the Controller
+---------------------
+1. Make sure that the launch ignition box is armed & ready and everyone is a safe distance away from the launch pad
+2. Power on the launch controller by turning the key switch in the clockwise direction
+    ![Key-operated power switch][powering-on]
+3. Turn the black arming switch to the upward position in order to arm the system; once a connection to the launch ignition box has been established, the safety siren on the launch ignition box should activate
+    ![Dual-position arming selector switch in vertical position][arming]
+4. Press the large red button to launch the rocket when ready
+    ![Dual-position arming selector switch in vertical position][launching]
 
 <a name="roadmap"></a>
 Roadmap
@@ -140,21 +132,22 @@ Contributing
 ---------------
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the project
+2. Create your feature branch (`git checkout -b username/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin username/amazing-feature`)
+5. Open a pull request onto the `develop` branch of the official repository
 
 <a name="license"></a>
 License
 -----------
-Distributed under the GNU Public License. See `LICENSE` for more information.
+Distributed under the GNU Public License. See [`LICENSE`][license] for more information.
 
 <a name="contacts"></a>
 Contacts
 -----------
 <!-- Your Name - @your_twitter - example@example.com -->
+**Maintainer**: Samuel D. Villegas - villegsa@oregonstate.edu
 
 <a name="donate"></a>
 Support the Project
@@ -190,5 +183,10 @@ Acknowledgements
 [issues-url]: https://github.com/HART-Avionics/osu-hart-user-interface/issues
 [license-shield]: https://img.shields.io/github/license/HART-Avionics/osu-hart-user-interface
 [license-url]: https://github.com/HART-Avionics/osu-hart-user-interface/blob/main/LICENSE
-[sphinx-docs]: https://www.sphinx-doc.org/en/master/index.html
+[corner-placement]: ./docs/images/corner_placement.png "Enclosure corner placement"
+[wiring-diagram]: ./docs/images/wiring_diagram.png "Wiring diagram"
+[powering-on]: ./docs/images/power_on.png
+[arming]: ./docs/images/arming.png
+[launching]: ./docs/images/launching.png
+[license]: ./LICENSE "GNU Public License"
 [donate-url]: https://osuaiaa.com/donate
