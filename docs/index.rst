@@ -1,5 +1,5 @@
-Welcome to OSU HART User Interface's documentation!
-==============================================
+Welcome to OSU HART's Launch Controller Documentation!
+=======================================================
 
 .. toctree::
    :maxdepth: 3
