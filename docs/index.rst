@@ -10,4 +10,3 @@ Welcome to OSU HART User Interface's documentation!
    getting_started
    download
    contributing
-   roadmap
