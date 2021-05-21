@@ -5,9 +5,13 @@ Assembling the Controller
 --------------------------
 1. Print the enclosure
 2. Glue the corners onto the enclosure
+
     ![Enclosure corner placement][corner-placement]
+
 3. Wire electronic components together according to the wiring diagram
+
     ![Wiring diagram][wiring-diagram]
+
 4. Put the electronics in the enclosure
 5. Screw the lid onto the enclosure
 
