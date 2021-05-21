@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'OSU HART User Interface'
+project = 'OSU HART Launch Controller'
 copyright = '2021, OSU HART'
 author = 'OSU HART'
 
